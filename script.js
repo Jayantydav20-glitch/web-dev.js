@@ -76,31 +76,31 @@
 
 
 // from lec=4
-// const name=document.querySelector("#name")
-// const btn=document.querySelector(".btn")
-// const list=document.querySelector(".list")
-// btn.addEventListener('click',()=>{
-//     if(name.value===""){
-//         alert("Please enter a name")
-//         return;
-//     }   
-//     const li=document.createElement('li')
-//     const dlt=document.createElement('button')
-//     dlt.innerText="Delete"
-//     li.innerText=name.value;
-//     dlt.addEventListener("click",()=>{
-//         list.removeChild(li)
-//     })
-//     li.appendChild(dlt)
-//     list.appendChild(li)
+const name=document.querySelector("#name")
+const btn=document.querySelector(".btn")
+const list=document.querySelector(".list")
+btn.addEventListener('click',()=>{
+    if(name.value===""){
+        alert("Please enter a name")
+        return;
+    }   
+    const li=document.createElement('li')
+    const dlt=document.createElement('button')
+    dlt.innerText="Delete"
+    li.innerText=name.value;
+    dlt.addEventListener("click",()=>{
+        list.removeChild(li)
+    })
+    li.appendChild(dlt)
+    list.appendChild(li)
     
-//     name.value=""
-// })
+    name.value=""
+})
 
 
 
 
-// lfrom lec=11
+// lfrom lec=11git
 // function third() {
 //     console.log("Third function is running.");
 // }
