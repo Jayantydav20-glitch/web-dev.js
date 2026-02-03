@@ -76,26 +76,26 @@
 
 
 // from lec=4
-const name=document.querySelector("#name")
-const btn=document.querySelector(".btn")
-const list=document.querySelector(".list")
-btn.addEventListener('click',()=>{
-    if(name.value===""){
-        alert("Please enter a name")
-        return;
-    }   
-    const li=document.createElement('li')
-    const dlt=document.createElement('button')
-    dlt.innerText="Delete"
-    li.innerText=name.value;
-    dlt.addEventListener("click",()=>{
-        list.removeChild(li)
-    })
-    li.appendChild(dlt)
-    list.appendChild(li)
+// const name=document.querySelector("#name")
+// const btn=document.querySelector(".btn")
+// const list=document.querySelector(".list")
+// btn.addEventListener('click',()=>{
+//     if(name.value===""){
+//         alert("Please enter a name")
+//         return;
+//     }   
+//     const li=document.createElement('li')
+//     const dlt=document.createElement('button')
+//     dlt.innerText="Delete"
+//     li.innerText=name.value;
+//     dlt.addEventListener("click",()=>{
+//         list.removeChild(li)
+//     })
+//     li.appendChild(dlt)
+//     list.appendChild(li)
     
-    name.value=""
-})
+//     name.value=""
+// })
 
 
 
@@ -130,9 +130,21 @@ btn.addEventListener('click',()=>{
 //     console.log("Starting dinner...)
 // }
 
-// function finishHomework(callback){
-//     console.log("Starting Homework...")
-//     settimeout(()=>{
-        
-//     }
-// }
+
+
+
+function finishHomework(callback) {
+    console.log("Starting homework...");
+    setTimeout(() => {
+        console.log("Homework done!");
+        callback();
+    }, 2000);
+}
+
+function startDinner(callback) {
+    console.log("Starting dinner...");
+    setTimeout(() => {
+        console.log("Dinner done!");
+        callback();
+    }, 1500);
+}
