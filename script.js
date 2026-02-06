@@ -132,19 +132,39 @@
 
 
 
+// callbacks 
+// function finishHomework(callback) {
+//     console.log("Starting homework...");
+//     setTimeout(() => {
+//         console.log("Homework done!");
+//         callback();
+//     }, 2000);
+// }
 
-function finishHomework(callback) {
-    console.log("Starting homework...");
-    setTimeout(() => {
-        console.log("Homework done!");
-        callback();
-    }, 2000);
-}
+// function startDinner(callback) {
+//     console.log("Starting dinner...");
+//     setTimeout(() => {
+//         console.log("Dinner done!");
+//         callback();
+//     }, 1500);
+// }
 
-function startDinner(callback) {
-    console.log("Starting dinner...");
-    setTimeout(() => {
-        console.log("Dinner done!");
-        callback();
-    }, 1500);
-}
+
+
+
+// Promise Chaining Starts doHomework()
+doHomework()
+.then((data) => {
+    console.log(data);
+    return eatDinner();
+})
+.then((data) => {
+    console.log(data);
+    return goToPlayground();
+})
+.ctch((error) => {
+    console.log("Something went wrong:", error);
+})
+.finally(() => {
+    console.log("Day ended - Go to sleep");
+});
