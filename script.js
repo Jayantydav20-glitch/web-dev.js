@@ -153,18 +153,42 @@
 
 
 // Promise Chaining Starts doHomework()
-doHomework()
-.then((data) => {
-    console.log(data);
-    return eatDinner();
-})
-.then((data) => {
-    console.log(data);
-    return goToPlayground();
-})
-.ctch((error) => {
-    console.log("Something went wrong:", error);
-})
-.finally(() => {
-    console.log("Day ended - Go to sleep");
-});
+// doHomework()
+// .then((data) => {
+//     console.log(data);
+//     return eatDinner();
+// })
+// .then((data) => {
+//     console.log(data);
+//     return goToPlayground();
+// })
+// .ctch((error) => {
+//     console.log("Something went wrong:", error);
+// })
+// .finally(() => {
+//     console.log("Day ended - Go to sleep");
+// });
+
+
+
+
+
+function orderfood() {
+    return new Promise((res, rej) =>{
+        setTimeout(()=> {
+            res("Food ordered!!")
+        }, 2000
+    })
+}function preparefood() {
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            res("Food prepared")
+        }, 3000
+    })
+}
+async function cookFood() {
+    const order = await orderfood();
+    console.log(order);
+    const prepare = await preparefood();
+    console.log(prepare);
+}
