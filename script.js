@@ -173,22 +173,89 @@
 
 
 
-function orderfood() {
-    return new Promise((res, rej) =>{
-        setTimeout(()=> {
-            res("Food ordered!!")
-        }, 2000
-    })
-}function preparefood() {
-    return new Promise((res, rej) => {
-        setTimeout(() => {
-            res("Food prepared")
-        }, 3000
-    })
-}
-async function cookFood() {
-    const order = await orderfood();
-    console.log(order);
-    const prepare = await preparefood();
-    console.log(prepare);
-}
+// function orderfood() {
+//     return new Promise((res, rej) =>{
+//         setTimeout(()=> {
+//             res("Food ordered!!")
+//         }, 2000
+//     })
+// }function preparefood() {
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             res("Food prepared")
+//         }, 3000
+//     })
+// }
+// async function cookFood() {
+//     const order = await orderfood();
+//     console.log(order);
+//     const prepare = await preparefood();
+//     console.log(prepare);
+//
+
+// console.log("First line");
+// try{
+//     // let sample = 345
+//     // console.log(sample)
+//     let age=16
+//     if(age <18){
+//         // console.log("you are minor")
+//         throw new Error("You are minor")
+//     }
+// }catch(e){
+//     console.error(e)
+//     console.log("Hello we got an error")
+// }
+// console.log("last line")
+
+
+
+
+// localStorage.setItem("name","Jayant Yadav")
+// localStorage.setItem("age",19)
+
+// const uname=localStorage.getItem("name")
+// console.log(uname)
+// console.log(localStorage.getItem("age"))
+
+// localStorage.removeItem("name")
+// localStorages.clear()
+
+// sessionStorage.setItem("name","Arbaaz")
+// sessionStorage.setItem("age",34)
+
+// const uname=sessionStorage.getItem("name")
+// console.log(uname)
+// console.log(sessionStorage.getItem("age"))
+
+// sessionStorage.removeItem("name")
+// sessionStorage.clear()
+
+// document.cookie="name=Jayany Yadav ; expires=Thu, 28 feb 2026 12:00:00 UTC;"
+// document.cookie="age=19; expires=Thu, 28 feb 2026 12:00:00 UTC;"
+
+// async function fetchData(){
+//   await fetch("file:///C:/Users/aliar/OneDrive/Desktop/web%20dev%20-%202/2sem.html")
+// }
+// fetchData()
+
+// function add(a,b,c){
+//   return a+b+c
+// }
+
+// function add(a){
+//   return function(b){
+//     return function(c){
+//       return a+b+c
+//     }
+//   }
+// }
+
+// const first=add(1)
+// console.log(first)
+// const second=first(2)
+// console.log(second)
+// const third=second(3)
+// console.log(third)
+
+// console.log(add(1)(2)(3))
